@@ -5,5 +5,6 @@ package tarea1;
  *
  * @author Jose Astorga
  */
+
 public class Barracks extends AbstractAttackable{
 }

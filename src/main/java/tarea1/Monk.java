@@ -1,9 +1,15 @@
 package tarea1;
 
 /**
- * Monk is an AbstractAttacker
+ * Monk is an AbstractUnit
  *
  * @author Jose Astorga
  */
-public class Monk extends AbstractAttacker{
+
+public class Monk extends AbstractUnit{
+    public static final double INITIAL_ATTACK_POINTS = 10;
+	
+	public Monk(hp){
+		super(hp,INITIAL_ATTACK_POINTS)
+	}
 }
