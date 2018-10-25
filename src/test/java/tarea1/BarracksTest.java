@@ -1,30 +1,87 @@
+package tarea1;
+
 import tarea1.*;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class BarracksUnitTest {
+public class BarracksTest {
     
-    private Entity infantry;
-    private Entity cavalry;
-    private Entity archer;
-    private Entity siege;
-    private Entity monk;
-    private Entity villager;
-    private Entity barracks;
-    private Entity castle;
+    private Attacker infantry;
+    private Attacker cavalry;
+    private Attacker archer;
+    private Attacker siege;
+    private Attacker monk;
+    private Attacker villager;
+    private Attacker castle;
+    private Entity barrack;
 
     @Before
     public void setUp(){
-        // infantry  = new InfantryUnit()
-        // cavalry   = new CavalryUnit()
-        // archer    = new ArcherUnit()
-        // siege     = new SiegeUnit()
-        // monk      = new Monk()
-        // villager  = new Villager()
+        infantry  = new InfantryUnit(100,10);
+        cavalry   = new CavalryUnit(100,10);
+        archer    = new ArcherUnit(100,10);
+        siege     = new SiegeUnit(100,10);
+        villager  = new Villager(100,10);
+        monk      = new Monk();
+        castle    = new Castle();
+        barrack   = new Barracks();
+    }
+    @Test
+    public void attackedByArcherTest(){
+        archer.attack( barrack );
+        double hp = barrack.getHp();
+        double expected = 500 - 7;
+        assertEquals(expected, hp, 0.01);
     }
 
     @Test
-    public void cantKeepStanding(){
+    public void attackedByCavalryTest(){
+        cavalry.attack( barrack );
+        double hp = barrack.getHp();
+        double expected = 500 - 7;
+        assertEquals(expected, hp, 0.01);
+    }
+
+    @Test
+    public void attackedByInfantryTest(){    
+        infantry.attack( barrack );
+        double hp = barrack.getHp();
+        double expected = 500 -7;
+        assertEquals(expected, hp, 0.01);
+    }
+
+    @Test
+    public void attackedByMonkTest(){
+        monk.attack( barrack );
+        double hp = barrack.getHp();
+        double expected = 500 ;
+        assertEquals(expected, hp, 0.01);
+    }
+
+    @Test
+    public void attackedBySiegeTest(){
+        siege.attack( barrack );
+        double hp = barrack.getHp();
+        double expected = 500 - 20;
+        assertEquals(expected, hp, 0.01);
+    }
+
+    @Test
+    public void attackedByVillagerTest(){
+        villager.attack( barrack );
+        double hp = barrack.getHp();
+        double expected = 500 + 7;
+        assertEquals(expected, hp, 0.01);
+
+    }
+   
+    @Test
+    public void attackedByCastleTest(){
+        castle.attack( barrack );
+        double hp = barrack.getHp();
+        double expected = 500 - 7;
+        assertEquals(expected, hp, 0.01);
+
     }
 }

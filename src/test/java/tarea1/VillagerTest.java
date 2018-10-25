@@ -1,11 +1,11 @@
 package tarea1;
-import tarea1.*;
+
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import static junit.framework.TestCase.assertEquals;
 
-public class SiegeUnitTest {
-        
+public class VillagerTest{
+    
     private Attacker infantry;
     private Attacker cavalry;
     private Attacker archer;
@@ -23,51 +23,51 @@ public class SiegeUnitTest {
         villager  = new Villager(100,10);
         monk      = new Monk();
         castle    = new Castle();
- }
+    }
     @Test
     public void attackedByArcherTest(){
-        archer.attack(siege);
-        double hp = siege.getHp();
-        double expected = 100 - 8;
+        archer.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100 - 15;
         assertEquals(expected, hp, 0.01);
     }
 
     @Test
     public void attackedByCavalryTest(){
-        cavalry.attack(siege);
-        double hp = siege.getHp();
-        double expected = 100 -12;
+        cavalry.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100 - 15;
         assertEquals(expected, hp, 0.01);
     }
 
     @Test
     public void attackedByInfantryTest(){    
-        infantry.attack(siege);
-        double hp = siege.getHp();
-        double expected = 100 -12;
+        infantry.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100 - 15;
         assertEquals(expected, hp, 0.01);
     }
 
     @Test
     public void attackedByMonkTest(){
-        monk.attack(siege);
-        double hp = siege.getHp();
-        double expected = 100;
+        monk.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100 + 10;
         assertEquals(expected, hp, 0.01);
     }
 
     @Test
     public void attackedBySiegeTest(){
-        siege.attack(siege);
-        double hp = siege.getHp();
-        double expected = 100 -15;
+        siege.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100 - 15;
         assertEquals(expected, hp, 0.01);
     }
 
     @Test
     public void attackedByVillagerTest(){
-        villager.attack(siege);
-        double hp = siege.getHp();
+        villager.attack( villager );
+        double hp = villager.getHp();
         double expected = 100 - 10;
         assertEquals(expected, hp, 0.01);
 
@@ -75,9 +75,9 @@ public class SiegeUnitTest {
    
     @Test
     public void attackedByCastleTest(){
-        castle.attack(siege);
-        double hp = siege.getHp();
-        double expected = 100 - 12;
+        castle.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100 - 24 ;
         assertEquals(expected, hp, 0.01);
 
     }
