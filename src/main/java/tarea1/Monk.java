@@ -12,4 +12,10 @@ public class Monk extends AbstractUnit{
 	public Monk(hp){
 		super(hp,INITIAL_ATTACK_POINTS)
 	}
+
+
+	public void attackedBy(Attacker attacker){
+		attacker.attackMonk(this);
+    }
+
 }

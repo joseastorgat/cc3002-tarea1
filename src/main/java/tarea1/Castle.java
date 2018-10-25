@@ -7,4 +7,10 @@ package tarea1;
  */
 
 public class Castle extends AbstractAttacker{
+
+
+	public void attackedBy(Attacker attacker){
+		attacker.attackCastle(this);
+    }
+
 }

@@ -13,4 +13,9 @@ public class SiegeUnit extends AbstractUnit{
 	public SiegeUnit(hp){
 		super(hp,INITIAL_ATTACK_POINTS)
 	}
+
+	public void attackedBy(Attacker attacker){
+		attacker.attackSiegeUnit(this);
+    }
+
 }

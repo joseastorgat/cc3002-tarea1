@@ -7,4 +7,11 @@ package tarea1;
  */
 
 public class Barracks extends AbstractAttackable{
+
+
+	public void attackedBy(Attacker attacker){
+		attacker.attackBarracks(this);
+    }
+
+
 }

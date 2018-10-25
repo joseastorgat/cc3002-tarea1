@@ -7,9 +7,15 @@ package tarea1;
  */
 
 public class Villager extends AbstractUnit{
-    public static final double INITIAL_ATTACK_POINTS = 10;
+    private static final double INITIAL_ATTACK_POINTS = 10;
+    private static final double INITIAL_HP_POINTS = 100;
 
-	public Villager(hp){
-		super(hp,INITIAL_ATTACK_POINTS)
+	public Villager(){
+		super(INITIAL_HP_POINTS, INITIAL_ATTACK_POINTS)
 	}
+
+	public void attackedBy(Attacker attacker){
+		attacker.attackVillager(this);
+    }
+
 }

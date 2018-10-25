@@ -12,4 +12,9 @@ public class InfantryUnit extends AbstractUnit{
 	public InfantryUnit(hp){
 		super(hp,INITIAL_ATTACK_POINTS)
 	}
+
+	public void attackedBy(Attacker attacker){
+		attacker.attackInfantryUnit(this);
+    }
+
 }

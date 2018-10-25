@@ -7,11 +7,20 @@ package tarea1;
  */
 
 public class ArcherUnit extends AbstractUnit{
-    public static final double INITIAL_ATTACK_POINTS = 10;
 	
 	public ArcherUnit(hp){
-		super(hp,INITIAL_ATTACK_POINTS)
+		super(hp,INITIAL_ATTACK_POINTS);
+        this.set_infantry_factor()
+        this.set_infantry_factor(13)
+        this.set_infantry_factor(15)
+        this.set_infantry_factor(61)
+        this.set_infantry_factor(15)
+           
 	}
+    
+    public void attackedBy(Attacker attacker){
+        attacker.attackArcherUnit(this);
+    }
 
 	
 

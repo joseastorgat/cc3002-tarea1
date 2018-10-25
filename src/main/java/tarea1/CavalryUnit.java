@@ -12,4 +12,9 @@ public class CavalryUnit extends AbstractUnit{
 	public CavalryUnit(hp){
 		super(hp,INITIAL_ATTACK_POINTS)
 	}
+
+	public void attackedBy(Attacker attacker){
+		attacker.attackCavalryUnit(this);
+    }
+
 }

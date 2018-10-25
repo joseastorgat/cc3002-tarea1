@@ -27,7 +27,6 @@ public abstract class AbstractAttackable implements Entity{
 		return maxHP;
 	}
 
-
 	@Override 
 	public boolean isAlive(){
 		return hp>0;
@@ -39,7 +38,7 @@ public abstract class AbstractAttackable implements Entity{
 			hp = 0;
 		}
 	}
-
+	
 	@Override 
 	public void heal(double health){
 		if this.isAlive(){
