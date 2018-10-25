@@ -50,13 +50,53 @@ public interface Entity {
      */
     boolean isAlive();
 
-
     /**
-     * method to deal with an attack to the Object
+     * method to deal with an attack from an ArcherUnit
      *
-     * @param attacker Attacker attacking the Object
+     * @param archer ArcherUnit attacking the object
      */
-
-    void attackedBy(Attacker attacker);
+    void attackedByArcher(ArcherUnit archer);
+    
+    /**
+     * method to deal with an attack from a CavalryUnit
+     *
+     * @param cavalry CavalryUnit attacking the object
+     */
+    void attackedByCavalry(CavalryUnit cavalry);
+    
+    /**
+     * method to deal with an attack from a Castle Building
+     *
+     * @param castle Castle attacking the object
+     */
+    void attackedByCastle(Castle castle);
+    
+    /**
+     * method to deal with an attack from an InfantryUnit
+     *
+     * @param infatry InfantryUnit attacking the object
+     */
+    void attackedByInfantry(InfantryUnit infantry);
+    
+    /**
+     * method to deal with an attack from a Archer
+     *
+     * @param monk Monk attacking the object
+     */
+    void attackedByMonk(Monk monk);
+    
+    /**
+     * method to deal with an attack from a SiegeUnit
+     *
+     * @param siege SiegeUnit attacking the object
+     */
+    void attackedBySiegeUnit(SiegeUnit siege);
+    
+    /**
+     * method to deal with an attack from a Villager
+     *
+     * @param villager Villager object attacking the object
+     */
+    void attackedByVillager(Villager villager);
 
 }
