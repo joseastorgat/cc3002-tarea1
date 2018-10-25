@@ -7,15 +7,51 @@ package tarea1;
  */
 
 public class Monk extends AbstractUnit{
-    public static final double INITIAL_ATTACK_POINTS = 10;
-	
-	public Monk(hp){
-		super(hp,INITIAL_ATTACK_POINTS)
+	private static final double MONK_INIT_HP=9000;
+	private static final double MONK_HEAL_FACTOR=20;
+
+
+	public Monk(){
+		super(MONK_INIT_HP, MONK_HEAL_FACTOR);
 	}
 
-
-	public void attackedBy(Attacker attacker){
-		attacker.attackMonk(this);
+	@Override
+	public void attack(Entity entity){
+		entity.attackedByMonk(this);
     }
+
+	@Override
+
+    public void attackedByArcher(ArcherUnit archer){
+    	this.dieInstantly();
+    }
+	
+	@Override
+    public void attackedByCavalry(CavalryUnit cavalry){
+    	this.dieInstantly();
+    }
+	
+	@Override
+    public void attackedByCastle(Castle castle){
+    	this.dieInstantly();
+    }
+
+    @Override
+	public void attackedByInfantry(InfantryUnit infantry){
+		this.dieInstantly();
+	}
+        
+    @Override
+    public void attackedBySiegeUnit(SiegeUnit siege){
+    	this.dieInstantly();
+	}
+    
+    @Override
+    public void attackedByVillager(Villager villager){}
+
+
+	public void dieInstantly(){
+		this.receiveDamage(this.getHp());
+	}
 
 }

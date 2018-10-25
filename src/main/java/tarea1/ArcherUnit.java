@@ -7,38 +7,42 @@ package tarea1;
  */
 
 public class ArcherUnit extends AbstractUnit{
-	
-	public ArcherUnit(hp){
-		super(hp,INITIAL_ATTACK_POINTS);
-        this.set_infantry_factor()
-        this.set_infantry_factor(13)
-        this.set_infantry_factor(15)
-        this.set_infantry_factor(61)
-        this.set_infantry_factor(15)
-           
+	public ArcherUnit(double hp, double attackpoints){
+        super(hp, attackpoints);
 	}
-    
-    public void attackedBy(Attacker attacker){
-        attacker.attackArcherUnit(this);
+
+	@Override
+	public void attack(Entity entity){
+		entity.attackedByArcher(this);
     }
 
+	@Override
+    public void attackedByArcher(ArcherUnit archer){
+    	this.receiveDamage(archer.getAttackPoints()*1.2);
+    }
 	
+	@Override
+    public void attackedByCavalry(CavalryUnit cavalry){
+    	this.receiveDamage(cavalry.getAttackPoints()*1.5);
+    }
+	
+	@Override
+    public void attackedByCastle(Castle castle){
+    	this.receiveDamage(castle.getAttackPoints()*1.2);
+    }
 
-    // @Override
-    // public void attackInfantryUnit(InfantryUnit infantry);
-    // @Override
-    // public void attackCavalryUnit(CavalryUnit cavalry);
-    // @Override
-    // public void attackSiegeUnit(SiegeUnit siege);
-    // @Override
-    // public void attackArcherUnit(ArcherUnit archer);
-    // @Override
-    // public void attackVillager(Villager villager);
-    // @Override
-    // public void attackMonk(Monk monk);
-    // @Override
-    // public void attackCastle(Castle castle);
-    // @Override
-    // public void attackBarrack(Barrack barrack);
-
+    @Override
+	public void attackedByInfantry(InfantryUnit infantry){
+    	this.receiveDamage(infantry.getAttackPoints()*1.2);
+	}
+        
+    @Override
+    public void attackedBySiegeUnit(SiegeUnit siege){
+    	this.receiveDamage(siege.getAttackPoints()*1.5);
+	}
+    
+    @Override
+    public void attackedByVillager(Villager villager){
+    	this.receiveDamage(villager.getAttackPoints()*1.0);
+	}
 }
