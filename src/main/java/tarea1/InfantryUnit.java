@@ -6,7 +6,13 @@ package tarea1;
  * @author Jose Astorga
  */
 
-public class InfantryUnit extends AbstractUnit{	
+public class InfantryUnit extends AbstractUnit{
+	/**
+	 * InfantryUnit Constructor
+	 *
+	 *  @param hp  Initial HitPoints of the object.
+	 * 	@param attackpoints  AttackPoints of the object.
+	 */
 	public InfantryUnit(double hp, double attackpoints){
 		super(hp, attackpoints);
 	}

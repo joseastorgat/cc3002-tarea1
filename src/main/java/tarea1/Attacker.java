@@ -1,9 +1,8 @@
 package tarea1;
 
-import tarea1.Entity;
-
 /**
  * Interface for Attackers
+ * An Attacker is an object that can attack Entity Objects
  *
  * @author Jose Astorga
  */
@@ -15,7 +14,8 @@ public interface Attacker extends Entity {
      *
      * @return AttackPoints of the object
      */
- 
+ 	
+ 	
     double getAttackPoints();
 
 	 /**

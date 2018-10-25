@@ -1,17 +1,14 @@
 package tarea1;
 
-
-import tarea1.Attacker;
-
 /**
- * Interface for Entity
- *
+ * Interface for Entitys. 
+ * An Entinty is a object that can be attacked by Attackers Objects
  * @author Jose Astorga
  */
 public interface Entity {
 
     /**
-     * method to obtain the actual HitPoints of the object
+     * method to obtain the actual HitPoints/hp (a.k.a. Life Points or Health Points) of the object.
      *
      * @return HitPoints of the object
      */
@@ -19,39 +16,38 @@ public interface Entity {
     double getHp();
 
     /**
-     * method to obtain the max Hitpoint of the object
+     * method to obtain the maximum amount of hp that the object can have.
      *
-     * @return maxHitPoints of the object
+     * @return double Max HitPoint of the object
      */
 
     double getMaxHp();
 
 
     /**
-     * method to deal with a attack to the object
-     *
+     * method to deal damage to the object. Deal damage consist in a reduction of hp.
      * @param damage Damage delivered to the object
      */
     void receiveDamage(double damage);
 
 
     /**
-     * method to deal with an 
-     *
+     * method to deal with a healing action. healing consist in an increase of hp.
+     * A healing can be received only if the object is alive.
      * @param health  Health delivered to the object
      */    
     void heal(double health);
 
 
     /**
-     * method to check if the entity is live ( hp>0 )
-     
-     * @return  Boolean indicating if the entity isAlive 
+     * method to check if the entity is live. The object is alive if his hp is a positive non zero (hp>0) .
+     *
+     * @return Boolean indicating if the entity isAlive ( True if is alive, False otherwise)
      */
     boolean isAlive();
 
     /**
-     * method to deal with an attack from an ArcherUnit
+     * method to deal with an attack from an ArcherUnit object.
      *
      * @param archer ArcherUnit attacking the object
      */
@@ -74,12 +70,12 @@ public interface Entity {
     /**
      * method to deal with an attack from an InfantryUnit
      *
-     * @param infatry InfantryUnit attacking the object
+     * @param infantry InfantryUnit attacking the object
      */
     void attackedByInfantry(InfantryUnit infantry);
     
     /**
-     * method to deal with an attack from a Archer
+     * method to deal with an attack from a Monk
      *
      * @param monk Monk attacking the object
      */
@@ -98,5 +94,4 @@ public interface Entity {
      * @param villager Villager object attacking the object
      */
     void attackedByVillager(Villager villager);
-
 }

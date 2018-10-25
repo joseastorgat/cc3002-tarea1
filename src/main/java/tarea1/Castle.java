@@ -8,10 +8,16 @@ package tarea1;
 
 public class Castle extends AbstractAttacker{
     private static final double CASTLE_HP=1000;
-    private static final double CASTLE_DMG_FACTOR=20;
+    private static final double CASTLE_ATTACKPOINT=20;
 
+	/**
+	 * Castle Constructor
+	 * Castle's have a fixed initialHp value equal to 1000
+	 * Castle's have a fixed attackpoints value equal to 20
+	 * Castle's maxHP is equal to his initial_hp
+	 */
 	public Castle(){
-        super(CASTLE_HP, CASTLE_HP, CASTLE_DMG_FACTOR);
+        super(CASTLE_HP, CASTLE_HP, CASTLE_ATTACKPOINT);
 	}
 
 	public void attack(Entity entity){

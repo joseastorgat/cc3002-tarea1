@@ -7,7 +7,12 @@ package tarea1;
  */
 
 public class CavalryUnit extends AbstractUnit{
-	
+	/**
+	 * CavalryUnit Constructor
+	 *
+	 *  @param hp  Initial HitPoints of the object.
+	 * 	@param attackpoints  AttackPoints of the object.
+	 */
 	public CavalryUnit(double hp, double attackpoints){
         super(hp, attackpoints);
 	}

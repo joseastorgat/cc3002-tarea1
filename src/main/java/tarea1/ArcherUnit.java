@@ -7,6 +7,12 @@ package tarea1;
  */
 
 public class ArcherUnit extends AbstractUnit{
+	/**
+	 * ArcherUnit Constructor
+	 *
+	 *  @param hp  Initial HitPoints of the object.
+	 * 	@param attackpoints  AttackPoints of the object.
+	 */
 	public ArcherUnit(double hp, double attackpoints){
         super(hp, attackpoints);
 	}
@@ -20,7 +26,7 @@ public class ArcherUnit extends AbstractUnit{
     public void attackedByArcher(ArcherUnit archer){
     	this.receiveDamage(archer.getAttackPoints()*1.2);
     }
-	
+
 	@Override
     public void attackedByCavalry(CavalryUnit cavalry){
     	this.receiveDamage(cavalry.getAttackPoints()*1.5);

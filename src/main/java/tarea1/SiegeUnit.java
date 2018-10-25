@@ -8,7 +8,12 @@ package tarea1;
 
 
 public class SiegeUnit extends AbstractUnit{
-	
+	/**
+	 * SiegeUnit Constructor
+	 *
+	 *  @param hp  Initial HitPoints of the object.
+	 * 	@param attackpoints  AttackPoints of the object.
+	 */
 	public SiegeUnit(double hp, double attackpoints){
 		super(hp, attackpoints);
 	}
