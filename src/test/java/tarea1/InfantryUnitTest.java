@@ -69,15 +69,15 @@ public class InfantryUnitTest {
     public void attackedByVillagerTest(){
         villager.attack( infantry );
         double hp = infantry.getHp();
-        double expected = 100 - 0.8;
+        double expected = 100 - 8;
         assertEquals(expected, hp, 0.01);
     }
    
     @Test
     public void attackedByCastleTest(){
-        archer.attack( infantry );
+        castle.attack( infantry );
         double hp = infantry.getHp();
-        double expected = 100-1.2;
+        double expected = 100-24;
         assertEquals(expected, hp, 0.01);
     }
 }

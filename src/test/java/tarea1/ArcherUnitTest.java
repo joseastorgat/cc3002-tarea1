@@ -77,7 +77,7 @@ public class ArcherUnitTest {
     public void attackedByCastleTest(){
         castle.attack( archer );
         double hp = archer.getHp();
-        double expected = 100 - 12;
+        double expected = 100 - 24;
         assertEquals(expected, hp, 0.01);
 
     }

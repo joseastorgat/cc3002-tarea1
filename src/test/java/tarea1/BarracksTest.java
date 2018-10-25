@@ -69,9 +69,10 @@ public class BarracksTest {
 
     @Test
     public void attackedByVillagerTest(){
+        this.attackedBySiegeTest();
         villager.attack( barrack );
         double hp = barrack.getHp();
-        double expected = 500 + 7;
+        double expected = 500 - 20 + 7;
         assertEquals(expected, hp, 0.01);
 
     }
@@ -80,7 +81,7 @@ public class BarracksTest {
     public void attackedByCastleTest(){
         castle.attack( barrack );
         double hp = barrack.getHp();
-        double expected = 500 - 7;
+        double expected = 500 - 14;
         assertEquals(expected, hp, 0.01);
 
     }

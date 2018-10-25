@@ -29,7 +29,7 @@ public class CavalryUnitTest {
     public void attackedByArcherTest(){
         archer.attack( cavalry );
         double hp = cavalry.getHp();
-        double expected = 100 - 12;
+        double expected = 100 - 10;
         assertEquals(expected, hp, 0.01);
     }
 
@@ -45,7 +45,7 @@ public class CavalryUnitTest {
     public void attackedByInfantryTest(){    
         infantry.attack( cavalry );
         double hp = cavalry.getHp();
-        double expected = 100 - 10;
+        double expected = 100 - 12;
         assertEquals(expected, hp, 0.01);
     }
 
@@ -78,7 +78,7 @@ public class CavalryUnitTest {
     public void attackedByCastleTest(){
         castle.attack( cavalry );
         double hp = cavalry.getHp();
-        double expected = 100 -12;
+        double expected = 100 -24;
         assertEquals(expected, hp, 0.01);
 
     }

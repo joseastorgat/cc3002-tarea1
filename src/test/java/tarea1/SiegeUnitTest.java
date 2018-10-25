@@ -1,5 +1,4 @@
 package tarea1;
-import tarea1.*;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -68,7 +67,7 @@ public class SiegeUnitTest {
     public void attackedByVillagerTest(){
         villager.attack(siege);
         double hp = siege.getHp();
-        double expected = 100 - 10;
+        double expected = 100 + 5;
         assertEquals(expected, hp, 0.01);
 
     }
@@ -77,7 +76,7 @@ public class SiegeUnitTest {
     public void attackedByCastleTest(){
         castle.attack(siege);
         double hp = siege.getHp();
-        double expected = 100 - 12;
+        double expected = 100 - 10;
         assertEquals(expected, hp, 0.01);
 
     }
