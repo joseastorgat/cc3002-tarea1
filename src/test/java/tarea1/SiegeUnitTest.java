@@ -3,6 +3,11 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * TestClass to test SiegeUnit
+ *
+ * @author Jose Astorga
+ */
 public class SiegeUnitTest {
         
     private Attacker infantry;

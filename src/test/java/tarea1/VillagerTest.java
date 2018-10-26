@@ -4,6 +4,11 @@ import org.junit.Before;
 import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
+/**
+ * TestClass to test Villager
+ *
+ * @author Jose Astorga
+ */
 public class VillagerTest{
     
     private Attacker infantry;

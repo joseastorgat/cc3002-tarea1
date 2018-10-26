@@ -5,6 +5,11 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * TestClass to test Castle
+ *
+ * @author Jose Astorga
+ */
 public class CastleTest {
 
     private Attacker infantry;
