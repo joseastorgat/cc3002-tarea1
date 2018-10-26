@@ -85,4 +85,22 @@ public class SiegeUnitTest {
         assertEquals(expected, hp, 0.01);
 
     }
+
+   @Test
+    public void attackTest(){
+        double expected = 100 - 15; 
+        siege.attack( villager );
+        double hp = villager.getHp();
+        assertEquals(expected, hp, 0.01);   
+    }
+
+    @Test 
+    public void cantAttackWhenIsDead(){
+        siege.receiveDamage( siege.getHp()); 
+        siege.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100;
+        assertEquals(expected, hp, 0.01);      
+    }
+
 }

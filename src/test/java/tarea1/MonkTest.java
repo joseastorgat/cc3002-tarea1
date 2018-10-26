@@ -17,7 +17,7 @@ public class MonkTest {
     private Attacker cavalry;
     private Attacker archer;
     private Attacker siege;
-    private Attacker monk;
+    private Monk monk;
     private Attacker villager;
     private Attacker castle;
 
@@ -88,5 +88,28 @@ public class MonkTest {
         double expected = 0;
         assertEquals(expected, hp, 0.01);
 
+    }
+
+   @Test
+    public void attackTest(){
+        double expected = 100 + 10; 
+        monk.attack( villager );
+        double hp = villager.getHp();
+        assertEquals(expected, hp, 0.01);   
+    }
+
+    @Test 
+    public void cantAttackWhenIsDead(){
+        monk.receiveDamage( monk.getHp()); 
+        monk.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100;
+        assertEquals(expected, hp, 0.01);      
+    }
+
+    @Test
+    public void dieInstantlyTest(){
+        monk.dieInstantly();
+        assertFalse(monk.isAlive());
     }
 }

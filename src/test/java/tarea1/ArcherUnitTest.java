@@ -84,6 +84,22 @@ public class ArcherUnitTest {
         double hp = archer.getHp();
         double expected = 100 - 24;
         assertEquals(expected, hp, 0.01);
+    }
 
+    @Test
+    public void attackTest(){
+        double expected = 100 - 15; 
+        archer.attack( villager );
+        double hp = villager.getHp();
+        assertEquals(expected, hp, 0.01);   
+    }
+
+    @Test 
+    public void cantAttackWhenIsDead(){
+        archer.receiveDamage( archer.getHp()); 
+        archer.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100;
+        assertEquals(expected, hp, 0.01);      
     }
 }

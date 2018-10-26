@@ -87,4 +87,22 @@ public class CavalryUnitTest {
         assertEquals(expected, hp, 0.01);
 
     }
+
+   @Test
+    public void attackTest(){
+        double expected = 100 - 15; 
+        cavalry.attack( villager );
+        double hp = villager.getHp();
+        assertEquals(expected, hp, 0.01);   
+    }
+
+    @Test 
+    public void cantAttackWhenIsDead(){
+        cavalry.receiveDamage( cavalry.getHp()); 
+        cavalry.attack( villager );
+        double hp = villager.getHp();
+        double expected = 100;
+        assertEquals(expected, hp, 0.01);      
+    }
+
 }

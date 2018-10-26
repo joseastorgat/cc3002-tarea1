@@ -23,12 +23,7 @@ public class GeneralTest {
     @Before
     public void setUp(){
         infantry  = new InfantryUnit(100,10);
-        cavalry   = new CavalryUnit(100,10);
-        archer    = new ArcherUnit(100,10);
-        siege     = new SiegeUnit(100,10);
         villager  = new Villager(5,20);
-        monk      = new Monk();
-        castle    = new Castle();
     }
 
     @Test
