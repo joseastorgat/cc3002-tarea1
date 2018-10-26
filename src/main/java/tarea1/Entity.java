@@ -1,7 +1,7 @@
 package tarea1;
 
 /**
- * Interface for Entitys. 
+ * Interface for Entitys.  <br>
  * An Entinty is a object that can be attacked by Attackers Objects
  * @author Jose Astorga
  */

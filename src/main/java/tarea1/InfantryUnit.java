@@ -19,7 +19,9 @@ public class InfantryUnit extends AbstractUnit{
 	
 	@Override
 	public void attack(Entity entity){
-		entity.attackedByInfantry(this);
+		if(this.isAlive()){
+			entity.attackedByInfantry(this);
+		} ;
     }
 	@Override
     public void attackedByArcher(ArcherUnit archer){

@@ -11,8 +11,8 @@ public class Monk extends AbstractUnit{
 	private static final double MONK_HEAL_FACTOR=20;
 
 	/**
-	 * Monk Constructor
-	 * Monk's have a fixed initialHp value equal to 9000
+	 * Monk Constructor <br>
+	 * Monk's have a fixed initialHp value equal to 9000 <br>
 	 * Monk's have a fixed attackpoints value equal to 20
 	 */
 	public Monk(){
@@ -21,7 +21,10 @@ public class Monk extends AbstractUnit{
 
 	@Override
 	public void attack(Entity entity){
-		entity.attackedByMonk(this);
+		if(this.isAlive())
+		{
+			entity.attackedByMonk(this);
+		}
     }
 
 	@Override

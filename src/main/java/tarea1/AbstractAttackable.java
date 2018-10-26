@@ -25,6 +25,7 @@ public abstract class AbstractAttackable implements Entity{
 
 	/**
 	 * method to get the hp of the object.
+     *
  	 * @return double hp - actual HitPoints of the Object.
 	 */
 
@@ -36,6 +37,7 @@ public abstract class AbstractAttackable implements Entity{
 
 	/**
 	 * method to get the maximum amount of HitPoint the object can have.
+     *
 	 * @return double maxHP: maximum amount HitPoint the object can have.
 	 */
 
@@ -46,6 +48,7 @@ public abstract class AbstractAttackable implements Entity{
 
 	/**
 	 * method to check if the object is alive. An object is alive if their hp > 0.
+     *
 	 * @return True if the object is alive ( hp>), False otherwise.
 	 */
     @Override
@@ -54,9 +57,10 @@ public abstract class AbstractAttackable implements Entity{
 	}
 
 	/**
-	 * method to deal damage to the object.
-	 * Deal damage consist in a reduction of hp.
+	 * method to deal damage to the object. <br>
+	 * Deal damage consist in a reduction of hp. <br>
 	 * new_hp = actual_hp - damage.
+     *
 	 * @param damage Damage delivered to the object
 	 */
 
@@ -67,9 +71,9 @@ public abstract class AbstractAttackable implements Entity{
 		}
 	}
 	/**
-	 * method to deal with a healing action. Healing consist in an increase of hp.
-	 * A healing can be received only if the object is alive.
-	 * new_hp = max(max_hp, hp + health)
+	 * method to deal with a healing action. Healing consist in an increase of hp. <br>
+	 * A healing can be received only if the object is alive. <br>
+	 * new_hp is the max betweem maxHp and (hp + health). <br>
 	 * @param health  Health delivered to the object
 	 */
     @Override
@@ -82,8 +86,8 @@ public abstract class AbstractAttackable implements Entity{
 	}
 
     /**
-     * method to deal with an attack from a Monk.
-     * Monk heals when attack. The amount healed is equal to monk attack points * 0.5
+     * method to deal with an attack from a Monk. <br>
+     * Monk heals when attack. The amount healed is equal to monk attackPoints * 0.5.
      *
 	 * @param monk Monk attacking the object
      */

@@ -10,9 +10,9 @@ public class Barracks extends AbstractAttackable{
     private static final double BARRACK_HP=500;
 
 	/**
-	 * Barracks Constructor
-	 * Barracks have a fixed initial_hp value equal to 500
-	 * Castle's maxHP is equal to his initial_hp
+	 * Barracks Constructor.<br>
+	 * Barracks have a fixed initial_hp value equal to 500.<br>
+	 * Castle's maxHP is equal to his initial_hp.
 	 */
 	public Barracks(){
 		super(BARRACK_HP, BARRACK_HP);

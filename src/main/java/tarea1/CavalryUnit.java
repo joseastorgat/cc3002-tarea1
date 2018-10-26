@@ -19,7 +19,10 @@ public class CavalryUnit extends AbstractUnit{
 	
 	@Override
 	public void attack(Entity entity){
-		entity.attackedByCavalry(this);
+		if(this.isAlive())
+		{
+			entity.attackedByCavalry(this);
+		}
     }
 
 	@Override

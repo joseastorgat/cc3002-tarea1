@@ -19,7 +19,8 @@ public class Villager extends AbstractUnit{
 
 	@Override
 	public void attack(Entity entity){
-		entity.attackedByVillager(this);
+		if(this.isAlive()){
+		entity.attackedByVillager(this);}
     }
 
 

@@ -1,7 +1,7 @@
 package tarea1;
 
 /**
- * ArcherUnit is an AbstractAttacker
+ * ArcherUnit is an AbstractUnit AbstractAttacker
  *
  * @author Jose Astorga
  */
@@ -19,7 +19,8 @@ public class ArcherUnit extends AbstractUnit{
 
 	@Override
 	public void attack(Entity entity){
-		entity.attackedByArcher(this);
+		if(this.isAlive()){
+		entity.attackedByArcher(this);}
     }
 
 	@Override

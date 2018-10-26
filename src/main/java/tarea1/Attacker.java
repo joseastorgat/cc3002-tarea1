@@ -1,7 +1,7 @@
 package tarea1;
 
 /**
- * Interface for Attackers
+ * Interface for Attackers <br>
  * An Attacker is an object that can attack Entity Objects
  *
  * @author Jose Astorga

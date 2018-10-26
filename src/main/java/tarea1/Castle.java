@@ -11,17 +11,20 @@ public class Castle extends AbstractAttacker{
     private static final double CASTLE_ATTACKPOINT=20;
 
 	/**
-	 * Castle Constructor
-	 * Castle's have a fixed initialHp value equal to 1000
-	 * Castle's have a fixed attackpoints value equal to 20
-	 * Castle's maxHP is equal to his initial_hp
+	 * Castle Constructor.<br>
+	 * Castle's have a fixed initialHp value equal to 1000.<br>
+	 * Castle's have a fixed attackpoints value equal to 20.<br>
+	 * Castle's maxHP is equal to his initial_hp.<br>
 	 */
 	public Castle(){
         super(CASTLE_HP, CASTLE_HP, CASTLE_ATTACKPOINT);
 	}
 
 	public void attack(Entity entity){
-		entity.attackedByCastle(this);
+		if(this.isAlive())
+		{
+		    entity.attackedByCastle(this);
+		}
     }
 
 	@Override

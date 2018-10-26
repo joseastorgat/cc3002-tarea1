@@ -35,7 +35,7 @@ public abstract class AbstractAttacker extends AbstractAttackable implements Att
 	
 
 	/**
-     * abstract method to attack another Entity object
+     * smethod to attack another Entity object
      *
      * @param entity Entity object to be attacked
      */

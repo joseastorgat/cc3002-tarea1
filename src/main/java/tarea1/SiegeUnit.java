@@ -20,7 +20,10 @@ public class SiegeUnit extends AbstractUnit{
 
 	@Override
 	public void attack(Entity entity){
-		entity.attackedBySiegeUnit(this);
+
+		if(this.isAlive()){
+			entity.attackedBySiegeUnit(this);
+		}
     }
 	
 	@Override
