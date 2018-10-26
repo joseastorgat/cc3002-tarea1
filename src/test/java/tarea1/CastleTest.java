@@ -18,7 +18,7 @@ public class CastleTest {
     private Attacker siege;
     private Attacker monk;
     private Attacker villager;
-    private Attacker castle;
+    private Castle castle;
 
     @Before
     public void setUp(){

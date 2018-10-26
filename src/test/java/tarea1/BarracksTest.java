@@ -20,7 +20,7 @@ public class BarracksTest {
     private Attacker monk;
     private Attacker villager;
     private Attacker castle;
-    private Entity barrack;
+    private Barracks barrack;
 
     @Before
     public void setUp(){

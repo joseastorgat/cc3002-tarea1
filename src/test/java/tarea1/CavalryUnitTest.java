@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class CavalryUnitTest {
         
     private Attacker infantry;
-    private Attacker cavalry;
+    private CavalryUnit cavalry;
     private Attacker archer;
     private Attacker siege;
     private Attacker monk;

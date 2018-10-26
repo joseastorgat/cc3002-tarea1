@@ -13,7 +13,7 @@ public class SiegeUnitTest {
     private Attacker infantry;
     private Attacker cavalry;
     private Attacker archer;
-    private Attacker siege;
+    private SiegeUnit siege;
     private Attacker monk;
     private Attacker villager;
     private Attacker castle;

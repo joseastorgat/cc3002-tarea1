@@ -16,7 +16,7 @@ public class VillagerTest{
     private Attacker archer;
     private Attacker siege;
     private Attacker monk;
-    private Attacker villager;
+    private Villager villager;
     private Attacker castle;
 
     @Before
