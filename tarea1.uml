@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>tarea1</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1357.0">tarea1.Villager</node>
+    <node x="1044.0" y="1345.0">tarea1.SiegeUnit</node>
+    <node x="1126.0" y="0.0">tarea1.Entity</node>
+    <node x="1393.25" y="763.0">tarea1.Barracks</node>
+    <node x="1311.25" y="369.0">tarea1.AbstractAttackable</node>
+    <node x="983.75" y="501.5">tarea1.Attacker</node>
+    <node x="1392.0" y="1357.0">tarea1.ArcherUnit</node>
+    <node x="1190.5" y="1037.0">tarea1.Castle</node>
+    <node x="348.0" y="1357.0">tarea1.InfantryUnit</node>
+    <node x="696.0" y="1345.0">tarea1.Monk</node>
+    <node x="897.5" y="1133.5">tarea1.AbstractUnit</node>
+    <node x="1015.25" y="823.0">tarea1.AbstractAttacker</node>
+    <node x="1740.0" y="1357.0">tarea1.CavalryUnit</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="tarea1.CavalryUnit" target="tarea1.AbstractUnit">
+      <point x="0.0" y="-112.0" />
+      <point x="1904.0" y="1305.0" />
+      <point x="1147.75" y="1305.0" />
+      <point x="113.75" y="27.5" />
+    </edge>
+    <edge source="tarea1.Monk" target="tarea1.AbstractUnit">
+      <point x="0.0" y="-124.0" />
+      <point x="860.0" y="1325.0" />
+      <point x="1011.25" y="1325.0" />
+      <point x="-22.75" y="27.5" />
+    </edge>
+    <edge source="tarea1.Castle" target="tarea1.AbstractAttacker">
+      <point x="0.0" y="-124.0" />
+      <point x="1354.5" y="1012.0" />
+      <point x="1283.75" y="1012.0" />
+      <point x="89.5" y="52.0" />
+    </edge>
+    <edge source="tarea1.AbstractAttacker" target="tarea1.AbstractAttackable">
+      <point x="89.5" y="-52.0" />
+      <point x="1283.75" y="738.0" />
+      <point x="1393.25" y="738.0" />
+      <point x="-82.0" y="172.0" />
+    </edge>
+    <edge source="tarea1.Attacker" target="tarea1.Entity">
+      <point x="0.0" y="-39.5" />
+      <point x="1104.75" y="344.0" />
+      <point x="1208.0" y="344.0" />
+      <point x="-82.0" y="159.5" />
+    </edge>
+    <edge source="tarea1.AbstractAttacker" target="tarea1.Attacker">
+      <point x="-89.5" y="-52.0" />
+      <point x="0.0" y="39.5" />
+    </edge>
+    <edge source="tarea1.AbstractAttackable" target="tarea1.Entity">
+      <point x="0.0" y="-172.0" />
+      <point x="1475.25" y="344.0" />
+      <point x="1372.0" y="344.0" />
+      <point x="82.0" y="159.5" />
+    </edge>
+    <edge source="tarea1.SiegeUnit" target="tarea1.AbstractUnit">
+      <point x="0.0" y="-124.0" />
+      <point x="1208.0" y="1325.0" />
+      <point x="1056.75" y="1325.0" />
+      <point x="22.75" y="27.5" />
+    </edge>
+    <edge source="tarea1.Barracks" target="tarea1.AbstractAttackable">
+      <point x="0.0" y="-112.0" />
+      <point x="82.0" y="172.0" />
+    </edge>
+    <edge source="tarea1.AbstractUnit" target="tarea1.AbstractAttacker">
+      <point x="0.0" y="-27.5" />
+      <point x="1034.0" y="1012.0" />
+      <point x="1104.75" y="1012.0" />
+      <point x="-89.5" y="52.0" />
+    </edge>
+    <edge source="tarea1.ArcherUnit" target="tarea1.AbstractUnit">
+      <point x="0.0" y="-112.0" />
+      <point x="1556.0" y="1315.0" />
+      <point x="1102.25" y="1315.0" />
+      <point x="68.25" y="27.5" />
+    </edge>
+    <edge source="tarea1.Villager" target="tarea1.AbstractUnit">
+      <point x="0.0" y="-112.0" />
+      <point x="164.0" y="1305.0" />
+      <point x="920.25" y="1305.0" />
+      <point x="-113.75" y="27.5" />
+    </edge>
+    <edge source="tarea1.InfantryUnit" target="tarea1.AbstractUnit">
+      <point x="0.0" y="-112.0" />
+      <point x="512.0" y="1315.0" />
+      <point x="965.75" y="1315.0" />
+      <point x="-68.25" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6238361266294227" x="1346.623880597015" y="1367.5" />
+  <SelectedNodes>
+    <node>tarea1.Entity</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
